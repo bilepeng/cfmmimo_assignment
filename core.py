@@ -117,7 +117,7 @@ class GNN(nn.Module):
         return r
 
 
-class GNN(nn.Module):
+class GNNRecursive(nn.Module):
     def __init__(self, params, device):
         super().__init__()
         self.gnn = GNN(params, device)

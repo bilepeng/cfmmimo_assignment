@@ -1,4 +1,4 @@
-from core import CFData, sumrate, alm_update_lambda_mu, whether_converged, GNN
+from core import CFData, sumrate, alm_update_lambda_mu, whether_converged, GNNRecursive
 from core import calc_alm_penalty, calc_discreteness_penalty
 import torch.optim as optim
 import torch
@@ -77,8 +77,9 @@ if __name__ == "__main__":
     if args.device is not None:
         device = args.device
     elif torch.cuda.is_available():
-        # device = torch.device("mps")
         device = "cuda"
+    elif torch.backends.mps.is_available():
+        device = "mps"
     else:
         device = "cpu"
 
@@ -108,7 +109,7 @@ if __name__ == "__main__":
         else:
             params["num_samples_chunks"] = np.ceil(params["num_data_samples"] / chunks)
 
-    model = GNN(params, device)
+    model = GNNRecursive(params, device)
 
     # Debug
     dataset = CFData(params, path=path + "/training_data.npz", device=device)
@@ -174,7 +175,7 @@ if __name__ == "__main__":
             if counter > params["epoch"] * 0.5:
                 scheduler.step(loss.mean().item())
 
-            # c=0
+            c = 0
             if counter > params["epoch"]:
                 while len(conn_deficiency_history) > params["patience"]:
                     conn_deficiency_history.popleft()
