@@ -1,17 +1,14 @@
 # Distributed Combinatorial Optimization of Downlink User Assignment in mmWave Cell-free Massive MIMO Using Graph Neural Networks
 
 ![GitHub](https://img.shields.io/github/license/bilepeng/risnet_partial_csi)
-
-[//]: # ([![DOI]&#40;https://img.shields.io/badge/doi-10.1109/GLOBECOM54140.2023.10437049-informational&#41;]&#40;https://doi.org/10.1109/GLOBECOM54140.2023.10437049&#41;)
-
-[//]: # ([![arXiv]&#40;https://img.shields.io/badge/arXiv-2305.00667-informational&#41;]&#40;https://arxiv.org/abs/2305.00667&#41;)
+[![DOI](https://img.shields.io/badge/doi-10.1109/GLOBECOM52923.2024.10901132-informational)](https://doi.org/10.1109/GLOBECOM52923.2024.10901132)
+[![arXiv](https://img.shields.io/badge/arXiv-2406.05652-informational)](https://arxiv.org/abs/2406.05652)
 
 This repository contains the source code for the paper "Distributed Combinatorial Optimization of Downlink User Assignment in mmWave Cell-free Massive MIMO Using Graph Neural Networks"
 (Bile Peng, Bihan Guo, Karl-Ludwig Besser, Luca Kunz, Ramprasad Raghunath, Anke Schmeink, Eduard A. Jorswieck, Giuseppe Caire, H. Vincent Poor, 2024 IEEE
 Global Communications Conference, Dec. 2024.
-
-[//]: # ([doi:10.1109/GLOBECOM54140.2023.10437049]&#40;https://doi.org/10.1109/GLOBECOM54140.2023.10437049&#41;,)
-[//]: # ([arXiv:2305.00667]&#40;https://arxiv.org/abs/2305.00667&#41;&#41;.)
+([doi:10.1109/GLOBECOM52923.2024.10901132](https://doi.org/10.1109/GLOBECOM52923.2024.10901132),
+[arXiv:2406.05652](https://arxiv.org/abs/2406.05652))
 
 The data is available under https://drive.google.com/file/d/1H9g5PPtkazrdjGFMBhLszGSJbe513hXg/view?usp=share_link.
 
@@ -20,7 +17,7 @@ The data is available under https://drive.google.com/file/d/1H9g5PPtkazrdjGFMBhL
 Put the unzipped files in `data/` and run the following commands to train the model.
 
 ```bash
-python3 train.py 
+python3 train.py
 ```
 
 A folder with the name of its creation date and time is automatically created,
@@ -41,6 +38,22 @@ CNS-2128448 and ECCS-2335876.
 ## License and Referencing
 This program is licensed under the GPLv3 license. If you in any way use this
 code for research that results in publications, please cite our original
-article listed above.
+article listed above.  
+You can use the following BibTeX entry
 
-The bibtex file will be provided once the paper appears in IEEExplore.
+```bibtex
+@inproceedings{Peng2024distributed,
+  author = {Peng, Bile and Guo, Bihan and Besser, Karl-Ludwig and Kunz, Luca and Raghunath, Ramprasad and Schmeink, Anke and Jorswieck, Eduard A. and Caire, Giuseppe and Poor, H. Vincent},
+  title = {Distributed Combinatorial Optimization of Downlink User Assignment in mmWave Cell-free Massive MIMO Using Graph Neural Networks},
+  booktitle = {GLOBECOM 2024 -- 2024 IEEE Global Communications Conference},
+  year = {2024},
+  month = {12},
+  pages = {462--468},
+  publisher = {IEEE},
+  venue = {Cape Town, South Africa},
+  archiveprefix = {arXiv},
+  eprint = {2406.05652},
+  primaryclass = {eess.SP},
+  doi = {10.1109/GLOBECOM52923.2024.10901132},
+}
+```
